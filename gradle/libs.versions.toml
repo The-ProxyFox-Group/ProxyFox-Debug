@@ -1,0 +1,25 @@
+[versions]
+kotlin = "1.8.0"
+kotlinx_coroutines = "1.6.4"
+
+# Testing
+mockk = "1.+"
+
+# Plugins
+licenser = "1.1.2"
+
+[libraries]
+kotlin_stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlinx_coroutines_core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx_coroutines" }
+
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+kotlinx_coroutines_test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx_coroutines" }
+kotlin_test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+
+[bundles]
+base = ["kotlin_stdlib", "kotlinx_coroutines_core"]
+test = ["kotlin_test", "kotlinx_coroutines_test", "mockk"]
+
+[plugins]
+kotlin_jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+licenser = { id = "org.quiltmc.gradle.licenser", version.ref = "licenser" }

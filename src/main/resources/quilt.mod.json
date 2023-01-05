@@ -1,0 +1,36 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "dev.proxyfox",
+		"id": "proxyfox-debug",
+		"version": "${version}",
+		"metadata": {
+			"name": "ProxyFox Debug",
+			"description": "Debugging mod for Quilt",
+			"contributors": {
+				"The ProxyFox Group": "Owner"
+			},
+			"contact": {
+				"homepage": "https://proxyfox.dev/",
+				"issues": "https://github.com/The-ProxyFox-Group/ProxyFox-Debug/issues",
+				"sources": "https://github.com/The-ProxyFox-Group/ProxyFox-Debug"
+			},
+			"license": "MPL-2.0",
+			"icon": "assets/proxyfox-debug/icon.png"
+		},
+		"entrypoints": {
+			"pre_launch": "dev.proxyfox.debug.Main"
+		},
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.17.0-"
+			},
+			{
+				"id": "java",
+				"versions": ">=${java}"
+			}
+		]
+	},
+	"mixin": "proxyfox-debug.mixins.json"
+}

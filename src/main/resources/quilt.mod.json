@@ -21,6 +21,7 @@
 		"entrypoints": {
 			"pre_launch": "dev.proxyfox.debug.Main"
 		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
 		"depends": [
 			{
 				"id": "quilt_loader",

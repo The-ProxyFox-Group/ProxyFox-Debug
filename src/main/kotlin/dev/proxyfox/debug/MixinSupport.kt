@@ -32,7 +32,7 @@ fun Throwable.trimStackHead(): Throwable {
 	val stack = stackTrace
 
 	if (stack.size > 2) {
-		stackTrace = stack.copyOfRange(0, stack.size - 2)
+		stackTrace = stack.copyOfRange(2, stack.size)
 	}
 
 	return this

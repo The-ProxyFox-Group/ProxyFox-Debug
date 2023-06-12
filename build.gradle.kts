@@ -36,13 +36,13 @@ repositories {
 }
 
 dependencies {
-	implementation("org.quiltmc:quilt-loader:0.17.8")
-	implementation("net.fabricmc:sponge-mixin:0.11.4+mixin.0.8.5")
-	implementation("org.ow2.asm:asm:9.4")
-	implementation("org.ow2.asm:asm-analysis:9.4")
-	implementation("org.ow2.asm:asm-commons:9.4")
-	implementation("org.ow2.asm:asm-tree:9.4")
-	implementation("org.ow2.asm:asm-util:9.4")
+	implementation("org.quiltmc:quilt-loader:0.19.0")
+	implementation("net.fabricmc:sponge-mixin:0.12.5+mixin.0.8.5")
+	implementation("org.ow2.asm:asm:9.5")
+	implementation("org.ow2.asm:asm-analysis:9.5")
+	implementation("org.ow2.asm:asm-commons:9.5")
+	implementation("org.ow2.asm:asm-tree:9.5")
+	implementation("org.ow2.asm:asm-util:9.5")
 	testImplementation(kotlin("test"))
 }
 

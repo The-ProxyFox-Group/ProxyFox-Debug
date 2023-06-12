@@ -46,11 +46,6 @@ dependencies {
 	testImplementation(kotlin("test"))
 }
 
-// license {
-// 	rule(file(rootDir.resolve("HEADER")))
-// 	include("**/*.kt", "**/*.kts", "**/*.java")
-// }
-
 tasks {
 	test {
 		useJUnitPlatform()

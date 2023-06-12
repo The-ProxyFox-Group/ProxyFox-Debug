@@ -8,8 +8,10 @@
 
 package dev.proxyfox.debug
 
+import dev.proxyfox.debug.api.DebugEntrypoint
 import dev.proxyfox.debug.extensions.BeforeThrow
 import org.quiltmc.loader.api.ModContainer
+import org.quiltmc.loader.api.QuiltLoader
 import org.quiltmc.loader.api.entrypoint.PreLaunchEntrypoint
 import org.spongepowered.asm.mixin.injection.InjectionPoint
 
@@ -24,5 +26,9 @@ import org.spongepowered.asm.mixin.injection.InjectionPoint
 class Main : PreLaunchEntrypoint {
 	override fun onPreLaunch(mod: ModContainer) {
 		InjectionPoint.register(BeforeThrow::class.java, "PROXYFOX")
+
+		QuiltLoader
+			.getEntrypoints("proxyfox-debug", DebugEntrypoint::class.java)
+			.forEach(DebugEntrypoint::initializeDebug)
 	}
 }

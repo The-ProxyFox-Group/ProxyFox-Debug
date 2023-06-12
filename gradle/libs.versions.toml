@@ -6,7 +6,7 @@ kotlinx_coroutines = "1.6.4"
 mockk = "1.+"
 
 # Plugins
-licenser = "1.1.2"
+licenser = "2.0.1"
 
 [libraries]
 kotlin_stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }

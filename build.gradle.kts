@@ -10,9 +10,12 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
 	alias(libs.plugins.kotlin.jvm)
-	// TODO: Apply licenser when @file:Annotation bugs are fixed.
-	// alias(libs.plugins.licenser)
+	alias(libs.plugins.licenser)
 	`maven-publish`
+}
+
+license {
+	rule(file("HEADER"))
 }
 
 java {
